@@ -2,9 +2,15 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import icon from "astro-icon";
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
-	integrations: [mdx(), sitemap()],
+  site: 'https://irad.dev',
+  integrations: [mdx(), sitemap(), icon({include:{mdi:['linkedin', 'twitter', 'github']}})],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
