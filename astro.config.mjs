@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://irad.dev',
-  integrations: [mdx(), sitemap(), icon({include:{mdi:['linkedin', 'twitter', 'github']}})],
+  integrations: [mdx(), sitemap(), icon()],
 
   vite: {
     plugins: [tailwindcss()],
