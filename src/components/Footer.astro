@@ -3,41 +3,20 @@ import { Icon } from 'astro-icon/components';
 const today = new Date();
 ---
 
-<footer>
+<footer class="py-8 px-4 pb-24 bg-gradient-to-b from-gray-100 to-gray-200 text-gray-600 text-center">
 	&copy; {today.getFullYear()} Irad Aharoni. All rights reserved.
-	<div class="social-links">
-		<a href="mailto:irad.aharoni@gmail.com">
+	<div class="flex justify-center gap-4 mt-4">
+		<a href="mailto:irad.aharoni@gmail.com" class="no-underline text-gray-600 hover:text-black">
 			<span class="sr-only">Send Me an Email</span>
 			<Icon name="mdi:email" width="32" height="32" />
 		</a>
-		<a href="https://linkedin.com/in/iradaharoni" target="_blank">
+		<a href="https://linkedin.com/in/iradaharoni" target="_blank" class="no-underline text-gray-600 hover:text-black">
 			<span class="sr-only">Follow Me on LinkedIn</span>
 			<Icon name="mdi:linkedin" width="32" height="32" />
 		</a>
-		<a href="https://github.com/irad100" target="_blank">
+		<a href="https://github.com/irad100" target="_blank" class="no-underline text-gray-600 hover:text-black">
 			<span class="sr-only">Go to My GitHub repo</span>
 			<Icon name="mdi:github" width="32" height="32" />
 		</a>
 	</div>
 </footer>
-<style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
-</style>

@@ -15,94 +15,20 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.description {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date,
-			ul li a:hover .description {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main class="max-w-4xl mx-auto">
 			<section>
-				<ul>
+				<ul class="grid md:grid-cols-2 gap-2 md:gap-8 list-none m-0 p-0">
 					{
 						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="description">{post.data.description}</p>
-									<p class="date">
+							<li class="w-full md:first:col-span-2 first:col-span-1 first:mb-0 md:first:mb-4">
+								<a href={`/blog/${post.id}/`} class="block group no-underline transition duration-200 ease-in-out text-center">
+									<img width={720} height={360} src={post.data.heroImage} alt="" class="w-full mb-4 rounded-xl group-hover:shadow-lg" />
+									<h4 class="m-0 mb-2 text-gray-900 dark:text-white leading-tight group-hover:text-blue-600 md:first:text-4xl first:text-3xl font-semibold">{post.data.title}</h4>
+									<p class="m-0 mb-2 text-lg text-gray-600 dark:text-gray-300 group-hover:text-blue-600">{post.data.description}</p>
+									<p class="m-0 text-sm text-gray-600 dark:text-gray-300 group-hover:text-blue-600">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
 								</a>

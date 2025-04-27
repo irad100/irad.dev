@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // These use the CSS variables defined in src/styles/global.css
         accent: 'var(--accent)',
         'accent-dark': 'var(--accent-dark)',
         'site-black': 'rgb(var(--black) / <alpha-value>)',
@@ -16,12 +15,10 @@ export default {
         sans: ['Atkinson', 'sans-serif'],
       },
       boxShadow: {
-        // Using the CSS variable defined in src/styles/global.css
         DEFAULT: 'var(--box-shadow)',
       },
       backgroundImage: {
-         // Using the CSS variable defined in src/styles/global.css
-         'gray-gradient': 'linear-gradient(var(--gray-gradient))',
+         'gray-gradient': "linear-gradient(to bottom, theme('colors.gray-light'), white)",
       }
     },
   },

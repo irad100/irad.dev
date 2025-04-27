@@ -4,72 +4,31 @@ import { SITE_TITLE } from '../consts';
 import { Icon } from 'astro-icon/components';
 ---
 
-<header>
-	<nav>
-		<h2><a href="/"><img src="/favicon.svg" alt="Irad Aharoni" width="32" height="32" />{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+<header class="m-0 px-[1em] bg-white shadow-[0_2px_8px_rgba(var(--black),0.05)]">
+	<nav class="flex items-center justify-between">
+		<div class="m-0 text-xl">
+			<a href="/" class="no-underline flex items-center gap-2 text-[rgb(var(--black))]">
+				<img src="/favicon.svg" alt="Irad Aharoni" width="32" height="32" />{SITE_TITLE}
+			</a>
+		</div>
+		<div class="internal-links flex gap-x-4">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div class="social-links">
-			<a href="mailto:irad.aharoni@gmail.com">
+		<div class="social-links hidden md:flex gap-x-2">
+			<a href="mailto:irad.aharoni@gmail.com" class="flex p-2 text-[rgb(var(--black))]">
 				<span class="sr-only">Send Me an Email</span>
 				<Icon name="mdi:email" width="32" height="32" />
 			</a>
-			<a href="https://linkedin.com/in/iradaharoni" target="_blank">
+			<a href="https://linkedin.com/in/iradaharoni" target="_blank" class="flex p-2 text-[rgb(var(--black))]">
 				<span class="sr-only">Follow Me on LinkedIn</span>
 				<Icon name="mdi:linkedin" width="32" height="32" />
 			</a>
-			<a href="https://github.com/irad100" target="_blank">
+			<a href="https://github.com/irad100" target="_blank" class="flex p-2 text-[rgb(var(--black))]">
 				<span class="sr-only">Go to My GitHub repo</span>
 				<Icon name="mdi:github" width="32" height="32" />
 			</a>
 		</div>
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		gap: 0.5em;
-		font-family: monospace;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>

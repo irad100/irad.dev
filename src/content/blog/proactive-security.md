@@ -5,7 +5,7 @@ pubDate: 'Apr 27 2025'
 heroImage: '/proactive-security.png'
 ---
 
-### The current state of Cloud & Application Security
+## The current state of Cloud & Application Security
 
 The current state of Cloud & Application Security is very much around reactive solutions, the *-SPM* buzz has taken over: CSPM, ASPM, DSPM, AISPM, you name it.
 
@@ -19,12 +19,12 @@ This solution kinda worked, Engineering teams can keep driving the product forwa
 
 Also, the explosion of alerts causes Security teams to be fatigued while constantly fighting remediations and fixes.
 
-### How can we improve?
+## How can we improve?
 
 Let's look at it like trying to build a large building, in order to keep the building from falling apart you need to build strong foundations.
 This is exactly the same with Security, best practices in security architecture and secure guardrails can save you a lot of problems down the line, and it is often most overlooked in the security world.
 
-### The future of Security
+## The future of Security
 
 But still, security isn't a one-stop shop. how do you keep your security intact when the company continues to grow and expand.
 This is what I define as the area of Proactive Security.
