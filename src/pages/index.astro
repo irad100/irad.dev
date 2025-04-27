@@ -46,14 +46,15 @@ const posts = (await getCollection('blog')).sort(
 						</p>
 						<p>
 							Currently working as a Senior Software Engineer and Security Researcher
-							in the CTO Office at <a href="https://orca.security" class="text-accent hover:text-accent-dark">Orca Security</a>.
+							in the CTO Office at <a href="https://orca.security" class="text-gray-700 hover:text-gray-900 underline">Orca Security</a>.
 						</p>
 					</div>
 				</div>
 				<div class="text-center mt-8">
 					<a
 						href="/about"
-						class="inline-block bg-accent text-white px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors"
+						class="inline-block bg-accent text-white px-6 py-3 rounded-lg border-2 border-accent hover:bg-accent-dark hover:shadow-md focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200 ease-in-out"
+						role="button"
 					>
 						Learn More About Me →
 					</a>
@@ -66,23 +67,23 @@ const posts = (await getCollection('blog')).sort(
 					Feel free to reach out! You can find me on the following platforms:
 				</p>
 				<div class="flex justify-center gap-6 items-center">
-					<a href="mailto:irad.aharoni@gmail.com">
+					<a href="mailto:irad.aharoni@gmail.com" class="group">
 						<span class="sr-only">Send Me an Email</span>
-						<Icon name="mdi:email" width="32" height="32" />
+						<Icon name="mdi:email" width="32" height="32" class="text-accent group-hover:scale-110 transition-transform duration-200 ease-in-out"/>
 					</a>
-					<a href="https://linkedin.com/in/iradaharoni" target="_blank">
+					<a href="https://linkedin.com/in/iradaharoni" target="_blank" class="group">
 						<span class="sr-only">Follow Me on LinkedIn</span>
-						<Icon name="mdi:linkedin" width="32" height="32" />
+						<Icon name="mdi:linkedin" width="32" height="32" class="text-accent group-hover:scale-110 transition-transform duration-200 ease-in-out"/>
 					</a>
-					<a href="https://github.com/irad100" target="_blank">
+					<a href="https://github.com/irad100" target="_blank" class="group">
 						<span class="sr-only">Go to My GitHub repo</span>
-						<Icon name="mdi:github" width="32" height="32" />
+						<Icon name="mdi:github" width="32" height="32" class="text-accent group-hover:scale-110 transition-transform duration-200 ease-in-out"/>
 					</a>	
 				</div>
 			</section>
 
-			<section class="mt-16 text-center">
-				<h2 class="text-5xl font-bold mb-8">Recent Posts</h2>
+			<section class="mt-16">
+				<h2 class="text-5xl font-bold mb-8 text-center">Recent Posts</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{
 						posts.map((post) => (
@@ -98,9 +99,9 @@ const posts = (await getCollection('blog')).sort(
 									/>
 								</div>
 								<div class="p-6">
-									<h3 class="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+									<h4 class="text-lg md:text-xl font-semibold mb-2 group-hover:text-accent transition-colors break-words">
 										{post.data.title}
-									</h3>
+									</h4>
 									<p class="text-sm text-site-gray mb-3">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
@@ -113,7 +114,8 @@ const posts = (await getCollection('blog')).sort(
 				<div class="text-center mt-6">
 					<a 
 						href="/blog" 
-						class="inline-block bg-accent text-white px-6 py-3 rounded-lg hover:bg-accent-dark transition-colors"
+						class="inline-block bg-accent text-white px-6 py-3 rounded-lg border-2 border-accent hover:bg-accent-dark hover:shadow-md focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all duration-200 ease-in-out"
+						role="button"
 					>
 						View All Posts →
 					</a>
