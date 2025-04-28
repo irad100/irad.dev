@@ -5,7 +5,7 @@ pubDate: 'Apr 27 2025'
 heroImage: '/proactive-security.png'
 ---
 
-### The current state of Cloud & Application Security
+### The current state
 
 The current state of Cloud & Application Security is very much around reactive solutions, the *-SPM* buzz has taken over: CSPM, ASPM, DSPM, AISPM, you name it.
 
