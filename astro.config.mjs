@@ -7,15 +7,15 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://irad.dev",
-	integrations: [mdx(), sitemap(), icon()],
-	vite: {
-		plugins: [tailwindcss()],
-	},
-	experimental: {
-		responsiveImages: true,
-	},
-	image: {
-		experimentalLayout: "constrained",
-	},
+  site: "https://irad.dev",
+  integrations: [mdx(), sitemap(), icon()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  experimental: {
+    responsiveImages: true,
+  },
+  image: {
+    experimentalLayout: "constrained",
+  },
 });
