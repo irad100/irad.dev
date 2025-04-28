@@ -1,13 +1,13 @@
 ---
-title: 'Proactive Security'
-description: 'The future of security is proactive'
-pubDate: 'Apr 27 2025'
-heroImage: '/proactive-security.png'
+title: "Proactive Security"
+description: "The future of security is proactive"
+pubDate: "Apr 27 2025"
+heroImage: "/proactive-security.png"
 ---
 
 ### The current state
 
-The current state of Cloud & Application Security is very much around reactive solutions, the *-SPM* buzz has taken over: CSPM, ASPM, DSPM, AISPM, you name it.
+The current state of Cloud & Application Security is very much around reactive solutions, the _-SPM_ buzz has taken over: CSPM, ASPM, DSPM, AISPM, you name it.
 
 But why did it came about?
 This is because one of the most difficult problems in the Security world.

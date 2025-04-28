@@ -1,12 +1,13 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
-import { Icon } from 'astro-icon/components';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import { Icon } from "astro-icon/components";
+import Logo from "./public/favicon.svg";
 ---
 
 <header>
 	<nav>
-		<h2><a href="/"><img src="/favicon.svg" width="40" height="40"/>{SITE_TITLE}</a></h2>
+		<h2><a href="/"><Logo width={40} height={40} />{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>

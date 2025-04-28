@@ -1,11 +1,12 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { Image } from "astro:assets";
 
-type Props = Partial<CollectionEntry<'blog'>['data']> & {
+type Props = Partial<CollectionEntry<"blog">["data"]> & {
 	title: string;
 	description: string;
 };
@@ -62,20 +63,34 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+					{
+						heroImage && (
+							<Image
+								width={720}
+								height={360}
+								src={heroImage}
+								alt=""
+							/>
+						)
+					}
 				</div>
 				<div class="prose">
 					<div class="title">
-						{(pubDate || updatedDate) && (
-							<div class="date">
-								{pubDate && <FormattedDate date={pubDate} />}
-								{updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)}
-							</div>
-						)}
+						{
+							(pubDate || updatedDate) && (
+								<div class="date">
+									{pubDate && (
+										<FormattedDate date={pubDate} />
+									)}
+									{updatedDate && (
+										<div class="last-updated-on">
+											Last updated on{" "}
+											<FormattedDate date={updatedDate} />
+										</div>
+									)}
+								</div>
+							)
+						}
 						<h1>{title}</h1>
 						<p class="text-gray-500">{description}</p>
 						<hr />
