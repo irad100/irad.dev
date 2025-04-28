@@ -12,6 +12,7 @@
     "@astrojs/mdx": "^4.2.5",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.1",
+    "@iconify-json/logos": "^1.2.4",
     "@iconify-json/mdi": "^1.2.3",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.8",
@@ -20,6 +21,8 @@
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.2.4"
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   }
 }
