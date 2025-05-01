@@ -8,15 +8,13 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "sharp": "^0.34.1"
-  },
   "devDependencies": {
     "@astrojs/mdx": "^4.2.5",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.1",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/mdi": "^1.2.3",
+    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.8",
     "astro-icon": "^1.1.5",
