@@ -125,9 +125,9 @@ const posts = (await getCollection("blog"))
                   />
                 </div>
                 <div class="p-6">
-                  <h4 class="group-hover:text-accent mb-2 text-lg font-semibold break-words transition-colors md:text-xl">
+                  <h3 class="group-hover:text-accent mb-2 text-base font-semibold break-words transition-colors md:text-lg">
                     {post.data.title}
-                  </h4>
+                  </h3>
                   <p class="text-site-gray mb-3 text-sm">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
