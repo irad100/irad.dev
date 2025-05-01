@@ -1,5 +1,12 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import "@fontsource-variable/inter";
+@import "@fontsource/courier-prime";
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+  --font-dev: "Courier Prime", "monospace";
+}
 
 :root {
   --accent: #2337ff;
