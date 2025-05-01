@@ -100,7 +100,7 @@ const posts = (await getCollection("blog")).sort(
                   <Image
                     width={720}
                     height={480}
-                    src={`${post.data.heroImage}`}
+                    src={post.data.heroImage}
                     alt=""
                     class="aspect-3/2"
                   />
