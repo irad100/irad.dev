@@ -1,8 +1,8 @@
 ---
-title: "Proactive Security"
-description: "The future of security is proactive"
-pubDate: "Apr 27 2025"
-heroImage: "/proactive-security.png"
+title: Proactive Security
+description: The future of security is proactive
+pubDate: Apr 27 2025
+heroImage: ../assets/proactive-security.png
 ---
 
 ### The current state
