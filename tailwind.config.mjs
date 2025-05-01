@@ -13,7 +13,7 @@ export default {
         "gray-dark": "rgb(var(--gray-dark) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ["Atkinson", "sans-serif"],
+        sans: ["sans-serif"],
       },
       boxShadow: {
         // Using the CSS variable defined in src/styles/global.css
