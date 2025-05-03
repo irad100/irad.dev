@@ -56,7 +56,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <body>
     <Header />
     <main>
-      <article>
+      <article class="width-constrained prose lg:prose-xl">
         <div class="hero-image">
           {
             heroImage && (
@@ -70,26 +70,24 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             )
           }
         </div>
-        <article class="width-constrained prose lg:prose-xl">
-          <div class="title">
-            {
-              (pubDate || updatedDate) && (
-                <div class="date">
-                  <FormattedDate date={pubDate} />
-                  {updatedDate && (
-                    <div class="last-updated-on">
-                      Last updated on <FormattedDate date={updatedDate} />
-                    </div>
-                  )}
-                </div>
-              )
-            }
-            <h1>{title}</h1>
-            <p class="text-gray-500">{description}</p>
-            <hr />
-          </div>
-          <slot />
-        </article>
+        <div class="title">
+          {
+            (pubDate || updatedDate) && (
+              <div class="date">
+                <FormattedDate date={pubDate} />
+                {updatedDate && (
+                  <div class="last-updated-on">
+                    Last updated on <FormattedDate date={updatedDate} />
+                  </div>
+                )}
+              </div>
+            )
+          }
+          <h1>{title}</h1>
+          <p class="text-gray-500">{description}</p>
+          <hr />
+        </div>
+        <slot />
       </article>
     </main>
     <Footer />
