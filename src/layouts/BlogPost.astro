@@ -1,20 +1,15 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
-
-type Props = Partial<CollectionEntry<"blog">["data"]> & {
-  title: string;
-  description: string;
-};
+import Prose from "../components/Prose.astro";
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html>
   <head>
     <BaseHead title={title} description={description} />
     <style>
@@ -32,7 +27,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         border-radius: 12px;
         box-shadow: var(--box-shadow);
       }
-      .prose {
+      .width-constrained {
         width: 720px;
         max-width: calc(100% - 2em);
         margin: auto;
@@ -75,12 +70,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             )
           }
         </div>
-        <div class="prose">
+        <article class="width-constrained prose lg:prose-xl">
           <div class="title">
             {
               (pubDate || updatedDate) && (
                 <div class="date">
-                  {pubDate && <FormattedDate date={pubDate} />}
+                  <FormattedDate date={pubDate} />
                   {updatedDate && (
                     <div class="last-updated-on">
                       Last updated on <FormattedDate date={updatedDate} />
@@ -94,7 +89,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             <hr />
           </div>
           <slot />
-        </div>
+        </article>
       </article>
     </main>
     <Footer />
