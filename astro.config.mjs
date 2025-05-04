@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
@@ -19,6 +19,18 @@ export default defineConfig({
   },
   experimental: {
     responsiveImages: true,
+    fonts: [
+      {
+        provider: fontProviders.fontsource(),
+        name: "Inter",
+        cssVariable: "--font-inter",
+      },
+      {
+        provider: fontProviders.fontsource(),
+        name: "Courier Prime",
+        cssVariable: "--font-courier-prime",
+      }
+    ],
   },
   image: {
     experimentalLayout: "constrained",

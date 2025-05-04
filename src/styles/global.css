@@ -1,19 +1,15 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import "@fontsource-variable/inter";
-@import "@fontsource/courier-prime";
-
 @font-face {
   font-family: "Excalifont";
-  src: url("/fonts/Excalifont-Regular.woff2") format("woff2");
+  src: url("../fonts/Excalifont-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-@theme {
-  --font-sans: "Inter", "sans-serif";
-  --font-dev: "Courier Prime", "monospace";
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-dev: var(--font-courier-prime);
   --accent: #2337ff;
   --accent-dark: #000d8a;
   --black: 15, 18, 25;
