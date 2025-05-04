@@ -5,11 +5,11 @@
   src: url("../fonts/Excalifont-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @theme inline {
-  --font-sans: var(--font-inter);
-  --font-dev: var(--font-courier-prime);
+  --font-serif: var(--font-inter);
+  --font-mono: var(--font-courier-prime);
   --accent: #2337ff;
   --accent-dark: #000d8a;
   --black: 15, 18, 25;
@@ -31,6 +31,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     color: rgb(var(--gray-dark));
+    font-family: var(--font-serif);
     font-size: 20px;
     line-height: 1.7;
   }

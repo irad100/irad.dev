@@ -9,7 +9,11 @@ import rehypeMermaid from "rehype-mermaid";
 // https://astro.build/config
 export default defineConfig({
   site: "https://irad.dev",
-  integrations: [mdx(), sitemap(), icon()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    icon(),
+  ],
   vite: {
     // @ts-ignore - Suppress vite type conflict due to pnpm structure
     plugins: [tailwindcss()],
@@ -24,11 +28,17 @@ export default defineConfig({
         provider: fontProviders.fontsource(),
         name: "Inter",
         cssVariable: "--font-inter",
+        weights: ["400"],
+        styles: ["normal"],
+        subsets: ["latin"],
       },
       {
         provider: fontProviders.fontsource(),
         name: "Courier Prime",
         cssVariable: "--font-courier-prime",
+        weights: ["400"],
+        styles: ["normal"],
+        subsets: ["latin"],
       }
     ],
   },
@@ -41,16 +51,10 @@ export default defineConfig({
       excludeLangs: ["mermaid", "math"],
     },
     rehypePlugins: [
-      [
-        rehypeMermaid,
-        {
-          mermaidConfig: {
-            look: "handDrawn",
-            theme: "neutral",
-            fontFamily: "Excalifont, monospace",
-          },
-        },
-      ],
+      [rehypeMermaid, { strategy: "inline" }],
     ],
+  },
+  build: {
+    inlineStylesheets: "always",
   },
 });
