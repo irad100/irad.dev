@@ -51,7 +51,16 @@ export default defineConfig({
       excludeLangs: ["mermaid", "math"],
     },
     rehypePlugins: [
-      [rehypeMermaid, { strategy: "inline" }],
+      [
+        rehypeMermaid,
+        {
+          mermaidConfig: {
+            look: "handDrawn",
+            theme: "neutral",
+            fontFamily: "Excalifont, monospace",
+          },
+        },
+      ],
     ],
   },
   build: {
