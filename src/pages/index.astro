@@ -4,7 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
-import me from "../../public/me.jpg";
+import me from "../assets/me.jpg";
 import { Icon } from "astro-icon/components";
 
 const posts = (await getCollection("blog"))
@@ -28,7 +28,7 @@ const posts = (await getCollection("blog"))
           src={me}
           width={300}
           height={300}
-          alt="Irad Aharoni"
+          alt=""
           class="w-full rounded-lg"
         />
       </div>

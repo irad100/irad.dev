@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 @font-face {
   font-family: "Excalifont";
-  src: url("../fonts/Excalifont-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Excalifont-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: block;
