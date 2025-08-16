@@ -16,8 +16,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
   <body>
     <Header />
-    <main class="mx-auto w-full max-w-[720px]">
-      <article class="prose lg:prose-lg">
+    <main class="mx-auto w-full max-w-[1024px]">
+      <article class="prose lg:prose-lg max-w-none">
         <div class="w-full">
           {
             (
@@ -25,6 +25,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 width={600}
                 height={400}
                 src={heroImage}
+                densities={[1, 2, 3]}
+                quality={95}
                 alt=""
                 class="mx-auto block aspect-3/2 rounded-xl shadow-[var(--box-shadow)]"
               />

@@ -3,51 +3,58 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { Icon } from "astro-icon/components";
 
 const title = "About Me";
-const description = "Senior Software Engineer & Security Researcher";
+const description = "AI and Security, plus engineering, powered by coffee.";
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="title prose lg:prose-lg mb-12 text-center">
-    <h1 class="text-6xl font-bold">{title}</h1>
+  <div class="title prose lg:prose-lg mx-auto mb-12 text-center">
+    <h1 class="text-center text-6xl font-bold">{title}</h1>
     <p class="mt-4 text-gray-500">{description}</p>
     <hr />
   </div>
   <section class="mb-8">
     <p>
-      I'm deeply involved in developing and researching technologies in the
-      security space. Interested in Low Level (Linux, Memory Exploitation) and
-      High Level (Cloud, AI, Web Exploitation) technologies alike. Skilled in
-      Go, Python and Rust, I approach technical challenges with practical and
-      effective solutions.
+      I build at the intersection of <strong>AI</strong>
+      and <strong>Cybersecurity</strong> (where your model and your threat model
+      finally get to meet). I'm especially energized by security research, LLM-use,
+      and building agentic systems - ideally before the coffee wears off. I enjoy
+      shipping systems in high-impact, fast-paced environments; hacking on AI/ML
+      side projects; working with state-of-the-art AI libraries; and sharing what
+      I learn with the community. Open-source enthusiast, mentor, and always up for
+      collaborating on cool ideas in the security space (bonus points if there's
+      a pizza or beer involved).
     </p>
   </section>
 
   <section class="mb-8">
     <h2 class="mb-8 text-center text-5xl font-bold">Current Role</h2>
     <p class="mt-2">
-      Currently, I work in the <strong>CTO Office at Orca Security</strong> as a
-      <strong>Senior Software Engineer & Security Researcher</strong> within the
-      CTO Innovation Team (reporting to the CTO). My work involves developing new
-      projects from scratch.
+      <strong>Founding Engineer</strong> helping shape AI-native cyber at Stealth
+      - lots of whiteboards, coffee, and shipping.
     </p>
   </section>
 
   <section class="mb-8">
     <h2 class="mb-8 text-center text-5xl font-bold">Previous Experience</h2>
     <p class="mt-2">
-      Previously, I served in the <strong
-        >Israel Defense Forces (Unit Matzov)</strong
-      > for over 5 years. My last role there was <strong>Innovation Lead</strong
-      > in the CTO Office (June 2023 - June 2024), where I led innovation efforts
-      focused on the Cloud Security landscape of the IDF.
+      Previously, I was a <strong
+        >Senior Software Engineer & Security Researcher</strong
+      > in the CTO Office at Orca Security. Before that, I spent 5+ years in the
+      <strong>Israel Defense Forces (Unit Matzov)</strong>, finishing as <strong
+        >Innovation Lead</strong
+      > in the CTO Office (June 2023 - June 2024), leading initiatives across the
+      security landscape and building innovative products.
     </p>
   </section>
 
   <section class="mb-8">
-    <h2 class="mb-8 text-center text-5xl font-bold">Top Skills</h2>
+    <h2 class="mb-8 text-center text-5xl font-bold">Tech Stack & Skills</h2>
     <ul
       class="mx-auto mt-2 grid w-fit grid-cols-1 justify-items-start gap-2 sm:grid-cols-2"
     >
+      <li>
+        <Icon name="logos:go" class="mr-1 inline-block h-5 w-5 align-middle" /> Go
+      </li>
       <li>
         <Icon
           name="logos:python"
@@ -55,7 +62,16 @@ const description = "Senior Software Engineer & Security Researcher";
         /> Python
       </li>
       <li>
-        <Icon name="logos:go" class="mr-1 inline-block h-5 w-5 align-middle" /> Go
+        <Icon
+          name="logos:typescript-icon"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> TypeScript
+      </li>
+      <li>
+        <Icon
+          name="logos:bash-icon"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> Bash
       </li>
       <li>
         <Icon
@@ -71,6 +87,66 @@ const description = "Senior Software Engineer & Security Researcher";
       </li>
       <li>
         <Icon
+          name="logos:kubernetes"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> Kubernetes
+      </li>
+      <li>
+        <Icon
+          name="logos:docker-icon"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> Docker
+      </li>
+      <li>
+        <Icon name="logos:aws" class="mr-1 inline-block h-5 w-5 align-middle" />
+        AWS
+      </li>
+      <li>
+        <Icon
+          name="logos:google-cloud"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> GCP
+      </li>
+      <li>
+        <Icon
+          name="logos:terraform-icon"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> Terraform
+      </li>
+      <li>
+        <Icon
+          name="logos:helm"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> Helm
+      </li>
+      <li>
+        <Icon
+          name="mdi:sitemap"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> Microservices
+      </li>
+      <li>
+        <Icon name="mdi:flash" class="mr-1 inline-block h-5 w-5 align-middle" />
+        Event-Driven & Serverless
+      </li>
+      <li>
+        <Icon
+          name="logos:graphql"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> REST / GraphQL
+      </li>
+      <li>
+        <Icon
+          name="logos:grpc"
+          class="mr-1 inline-block h-5 w-5 align-middle"
+        /> gRPC / Protobuf
+      </li>
+      <li>
+        <Icon name="mdi:cog" class="mr-1 inline-block h-5 w-5 align-middle" /> CI/CD
+        & Observability
+      </li>
+      <li>
+        <Icon
           name="mdi:cloud-lock"
           class="mr-1 inline-block h-5 w-5 align-middle"
         /> Cloud Security
@@ -79,11 +155,7 @@ const description = "Senior Software Engineer & Security Researcher";
         <Icon
           name="mdi:shield-key"
           class="mr-1 inline-block h-5 w-5 align-middle"
-        /> Identity Security
-      </li>
-      <li>
-        <Icon name="mdi:api" class="mr-1 inline-block h-5 w-5 align-middle" /> API
-        Security
+        /> Identity & Access
       </li>
       <li>
         <Icon
@@ -102,30 +174,6 @@ const description = "Senior Software Engineer & Security Researcher";
           name="mdi:magnify-scan"
           class="mr-1 inline-block h-5 w-5 align-middle"
         /> Vulnerability Research
-      </li>
-    </ul>
-  </section>
-
-  <section class="mb-8">
-    <h2 class="mb-8 text-center text-5xl font-bold">Personal Traits</h2>
-    <ul class="mt-2 grid grid-cols-1 justify-items-center gap-2 sm:grid-cols-3">
-      <li>
-        <Icon
-          name="mdi:hammer-wrench"
-          class="mr-1 inline-block h-5 w-5 align-middle"
-        /> Hard Worker
-      </li>
-      <li>
-        <Icon
-          name="mdi:rocket-launch"
-          class="mr-1 inline-block h-5 w-5 align-middle"
-        /> Ambitious
-      </li>
-      <li>
-        <Icon
-          name="mdi:lightbulb-on"
-          class="mr-1 inline-block h-5 w-5 align-middle"
-        /> Creative
       </li>
     </ul>
   </section>

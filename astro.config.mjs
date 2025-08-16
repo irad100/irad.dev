@@ -9,11 +9,7 @@ import rehypeMermaid from "rehype-mermaid";
 // https://astro.build/config
 export default defineConfig({
   site: "https://irad.dev",
-  integrations: [
-    mdx(),
-    sitemap(),
-    icon(),
-  ],
+  integrations: [mdx(), sitemap(), icon()],
   vite: {
     // @ts-ignore - Suppress vite type conflict due to pnpm structure
     plugins: [tailwindcss()],
@@ -22,7 +18,6 @@ export default defineConfig({
     prefetchAll: true,
   },
   experimental: {
-    responsiveImages: true,
     fonts: [
       {
         provider: fontProviders.fontsource(),
@@ -39,7 +34,7 @@ export default defineConfig({
         weights: ["400"],
         styles: ["normal"],
         subsets: ["latin"],
-      }
+      },
     ],
   },
   image: {

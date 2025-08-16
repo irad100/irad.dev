@@ -1,8 +1,8 @@
 ---
-title: Proactive Security
-description: The future of security is proactive
+title: "Proactive Security: Make Systems Secure by Design"
+description: "Security has been focused on reactive posture management and alert triage. The real question is how do we make vulnerabilities unshippable by design?"
 pubDate: Apr 27 2025
-heroImage: ../assets/proactive-security.png
+heroImage: ../assets/proactive-security-by-design.png
 ---
 
 ### The current state

@@ -9,7 +9,6 @@
 }
 @theme inline {
   --font-serif: var(--font-inter);
-  --font-mono: var(--font-courier-prime);
   --accent: #2337ff;
   --accent-dark: #000d8a;
   --black: 15, 18, 25;
@@ -36,7 +35,7 @@
     line-height: 1.7;
   }
   main {
-    width: 720px;
+    width: 1024px;
     max-width: calc(100% - 2em);
     margin: auto;
     padding: 3em 1em;
